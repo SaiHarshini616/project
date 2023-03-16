@@ -1,0 +1,38 @@
+<head>
+  <title>LungCure </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="flaticon.css">
+  <link rel="stylesheet" href="aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="image_upload.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+</head>
+
+<body>
+    <div class="hero-image">
+        <div class="hero-text">
+            <form class="box" method="post" action="/predict" enctype="multipart/form-data">
+                <div class="box__input">
+                    <h1>Upload image and test your result</h1>
+                   <!--<input type="file" id="myFileInput"><br>
+                   <img id="myImage" src="#" alt="image preview">
+                   -->
+                   <input label="file616" type="file" name="file" onchange="readURL(this);" />
+                    <div><img id="blah" src="http://giphygifs.s3.amazonaws.com/media/G5ZzaFMyDNoPu/giphy.gif" alt="your image" height="200px" width="200px"  /></div>
+                    <div><button type="submit" class="button">Predict</button></div>
+                    {% if predictions.length != 0 %}
+                      <canvas style="margin-top: 30px;" id="predictions-chart" width="400" height="250"></canvas>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script src="image_upload.js"></script>
+</body>
